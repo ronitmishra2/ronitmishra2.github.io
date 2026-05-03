@@ -58,3 +58,22 @@ window.addEventListener("scroll", () => {
   }
 
 });
+
+// Open Modal
+function openModal(src) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalImg").src = src;
+}
+
+// Close Modal
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+
+// Close when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById("imgModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
